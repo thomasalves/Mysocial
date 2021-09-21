@@ -1,0 +1,14 @@
+.example-card {
+  max-width: 25%;
+  margin: 10px;
+  box-shadow: 1px 10px 10px 10px rgb(218, 218, 218);
+}
+
+.photos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  overflow: hidden;
+}

@@ -1,0 +1,37 @@
+
+  <div class="card">
+    <mat-card>
+    <mat-card-header>
+      <h2>Nova Postagem:</h2>
+    </mat-card-header>
+      <mat-card-content >
+        <form class="example-form" color="primary">
+          <mat-form-field class="example-full-width" appearance="fill" color= 'primary'>
+            <mat-label>Title</mat-label>
+            <input   matInput placeholder="Ex. o que está pensando?"  [(ngModel)]= "newPost.title" [ngModelOptions]="{standalone: true}"  >
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Comentario</mat-label>
+            <textarea   matInput placeholder="Ex. It makes me feel..."  [(ngModel)]= "newPost.body" [ngModelOptions]="{standalone: true}" ></textarea>
+          </mat-form-field>
+        </form>
+        <button mat-raised-button (click)="createPost()" color="primary">Nova Postagem</button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+<div class="main">
+  <mat-card class="example-card" *ngFor="let post of Post">
+    <mat-card-header>
+      <mat-card-title>{{post.title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content >
+      <p>
+        {{post.body}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Curtir</button>
+      <button mat-button>Compartilhar</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

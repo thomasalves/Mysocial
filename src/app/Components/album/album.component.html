@@ -1,0 +1,8 @@
+<div class="albuns" >
+  <h1>Albuns:</h1>
+  <div class="links" *ngFor="let album of Albums">
+    <button  mat-button (click)="Listalbum(album.id)" color="primary" >{{album.title}}</button><br>
+  </div>
+</div>
+
+
